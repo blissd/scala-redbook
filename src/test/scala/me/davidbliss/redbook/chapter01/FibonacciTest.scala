@@ -1,11 +1,11 @@
-package me.davidbliss.redbook.exercise_2_1
+package me.davidbliss.redbook.chapter01
 
 import org.scalatest.{FunSuite, Matchers}
 
 class FibonacciTest extends FunSuite with Matchers {
 
   test("Fib test") {
-    import Fibonacci._
+    import me.davidbliss.redbook.chapter01.Fibonacci._
 
     fib(0) shouldBe 0
     fib(1) shouldBe 1

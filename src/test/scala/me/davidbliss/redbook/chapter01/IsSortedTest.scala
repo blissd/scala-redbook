@@ -1,7 +1,7 @@
-package me.davidbliss.redbook.exercise_2_2
+package me.davidbliss.redbook.chapter01
 
+import me.davidbliss.redbook.chapter01.IsSorted.isSorted
 import org.scalatest.{FunSuite, Matchers}
-import IsSorted.isSorted
 
 class IsSortedTest extends FunSuite with Matchers {
 

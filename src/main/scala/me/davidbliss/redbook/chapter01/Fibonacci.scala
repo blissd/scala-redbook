@@ -1,4 +1,4 @@
-package me.davidbliss.redbook.exercise_2_1
+package me.davidbliss.redbook.chapter01
 
 import scala.annotation.tailrec
 

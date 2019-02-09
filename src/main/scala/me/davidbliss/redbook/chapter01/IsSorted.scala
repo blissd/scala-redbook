@@ -1,4 +1,4 @@
-package me.davidbliss.redbook.exercise_2_2
+package me.davidbliss.redbook.chapter01
 
 object IsSorted {
 
