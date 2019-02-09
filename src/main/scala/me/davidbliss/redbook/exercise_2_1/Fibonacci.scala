@@ -11,11 +11,11 @@ object Fibonacci {
     @tailrec
     def loop(i: Int, a: Int, b: Int): Int = {
       if (i == n) a + b
-      else if (i == 0) loop(1, 0, 1)
       else loop(i + 1, b, a + b)
     }
 
-    loop(0, 0, 0)
+    if (n == 0) 0
+    else loop(1, 0, 1)
   }
 
 }
