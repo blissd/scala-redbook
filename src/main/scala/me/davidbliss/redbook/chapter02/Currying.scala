@@ -1,4 +1,4 @@
-package me.davidbliss.redbook.chapter01
+package me.davidbliss.redbook.chapter02
 
 object Currying {
 

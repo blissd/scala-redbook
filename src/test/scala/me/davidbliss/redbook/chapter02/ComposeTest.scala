@@ -1,4 +1,4 @@
-package me.davidbliss.redbook.chapter01
+package me.davidbliss.redbook.chapter02
 
 import org.scalatest.{FunSuite, Matchers}
 import Compose._
