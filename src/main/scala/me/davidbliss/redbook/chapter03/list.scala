@@ -28,4 +28,7 @@ object List {
     case Cons(_, t) => t
   }
 
+  // exercise 3.3
+  def setHead[A](a: A, as: List[A]): List[A] = Cons(a, tail(as))
+
 }
