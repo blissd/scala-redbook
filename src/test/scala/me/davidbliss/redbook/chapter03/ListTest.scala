@@ -18,4 +18,8 @@ class ListTest extends FunSuite with Matchers {
     x shouldBe 3
   }
 
+  test("tail") {
+    tail(List(1,2,3,4,5)) shouldBe List(2,3,4,5)
+  }
+
 }

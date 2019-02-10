@@ -21,4 +21,11 @@ object List {
   def apply[A](as: A*): List[A] =
     if (as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))
+
+  // exercise 3.2
+  def tail[A](as: List[A]): List[A] = as match {
+    case Nil => Nil
+    case Cons(_, t) => t
+  }
+
 }
