@@ -23,7 +23,11 @@ class ListTest extends FunSuite with Matchers {
   }
 
   test("setHead") {
-    setHead(9, List(1,2,3,4,5)) shouldBe List(9,2,3,4,5)
+    setHead(List(1,2,3,4,5), 9) shouldBe List(9,2,3,4,5)
+  }
+
+  test("drop") {
+    drop(List(1,2,3,4,5), 2) shouldBe List(3,4,5)
   }
 
 }
