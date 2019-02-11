@@ -42,4 +42,12 @@ class ListTest extends FunSuite with Matchers {
     dropWhile(List(1, 2, 3, 4, 5), (x: Int) => x < 100) shouldBe Nil
   }
 
+  test("init") {
+    init(List(1, 2, 3, 4, 5)) shouldBe List(1, 2, 3, 4)
+  }
+
+  test("init empty") {
+    init(Nil) shouldBe Nil
+  }
+
 }
