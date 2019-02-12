@@ -54,4 +54,8 @@ class ListTest extends FunSuite with Matchers {
     List.length(List(1, 2, 3, 4, 5)) shouldBe 5
   }
 
+  test("foldLeft") {
+    foldLeft(List(1, 2, 3, 4, 5), 0)(_ + _) shouldBe 15
+  }
+
 }

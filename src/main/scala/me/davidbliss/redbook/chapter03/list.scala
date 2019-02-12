@@ -1,5 +1,7 @@
 package me.davidbliss.redbook.chapter03
 
+import scala.annotation.tailrec
+
 sealed trait List[+A]
 
 case object Nil extends List[Nothing]
@@ -60,4 +62,11 @@ object List {
 
   // exercise 3.9
   def length[A](as: List[A]): Int = foldRight(as, 0)((_, b) => b + 1)
+
+  // exercise 3.10
+  @tailrec
+  def foldLeft[A, B](as: List[A], z: B)(f: (B, A) => B): B = as match {
+    case Nil => z
+    case Cons(h, t) => foldLeft(t, f(z, h))(f)
+  }
 }
