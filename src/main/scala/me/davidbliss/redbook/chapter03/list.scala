@@ -69,4 +69,12 @@ object List {
     case Nil => z
     case Cons(h, t) => foldLeft(t, f(z, h))(f)
   }
+
+  // exercise 3.11
+  def sum3(ns: List[Int]) = foldLeft(ns, 0)((x, y) => x + y)
+
+  def product3(ns: List[Double]) = foldLeft(ns, 1.0)(_ * _)
+
+  def length2[A](as: List[A]): Int = foldLeft(as, 0)((b, _) => b + 1)
+
 }

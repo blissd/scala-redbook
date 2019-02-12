@@ -50,7 +50,7 @@ class ListTest extends FunSuite with Matchers {
     init(Nil) shouldBe Nil
   }
 
-  test("length") {
+  test("length in foldRight") {
     List.length(List(1, 2, 3, 4, 5)) shouldBe 5
   }
 
@@ -58,4 +58,15 @@ class ListTest extends FunSuite with Matchers {
     foldLeft(List(1, 2, 3, 4, 5), 0)(_ + _) shouldBe 15
   }
 
+  test("sum in foldLeft") {
+    sum3(List(1, 2, 3, 4, 5)) shouldBe 15
+  }
+
+  test("product in foldLeft") {
+    product3(List(1, 2, 3, 4, 5)) shouldBe 120
+  }
+
+  test("length in foldLeft") {
+    List.length2(List(1, 2, 3, 4, 5)) shouldBe 5
+  }
 }
