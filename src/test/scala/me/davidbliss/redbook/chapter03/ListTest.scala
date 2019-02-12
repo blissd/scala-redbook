@@ -50,4 +50,8 @@ class ListTest extends FunSuite with Matchers {
     init(Nil) shouldBe Nil
   }
 
+  test("length") {
+    List.length(List(1, 2, 3, 4, 5)) shouldBe 5
+  }
+
 }
