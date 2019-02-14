@@ -69,4 +69,13 @@ class ListTest extends FunSuite with Matchers {
   test("length in foldLeft") {
     List.length2(List(1, 2, 3, 4, 5)) shouldBe 5
   }
+
+  test("foldRight example from book") {
+    foldRight(List(1, 2, 3), Nil: List[Int])(Cons(_, _)) shouldBe List(1, 2, 3)
+  }
+
+  test("reverse in foldLeft") {
+    reverse(List(1, 2, 3)) shouldBe List(3, 2, 1)
+    reverse(Nil) shouldBe Nil
+  }
 }
