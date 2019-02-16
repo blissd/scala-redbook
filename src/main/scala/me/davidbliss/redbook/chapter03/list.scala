@@ -29,6 +29,10 @@ object List {
     case Cons(x, xs) => f(x, foldRight(xs, z)(f))
   }
 
+  // 3.13 - probably a better way to do this...
+  def foldRightViaFoldLeft[A, B](as: List[A], z: B)(f: (A, B) => B): B =
+    foldLeft(reverse(as), z)((b, a) => f(a, b))
+
   def sum2(ns: List[Int]) = foldRight(ns, 0)((x, y) => x + y)
 
   def product2(ns: List[Double]) = foldRight(ns, 1.0)(_ * _)
@@ -78,5 +82,5 @@ object List {
   def length2[A](as: List[A]): Int = foldLeft(as, 0)((b, _) => b + 1)
 
   // exercise 3.12
-  def reverse[A](as: List[A]): List[A] = foldLeft(as, Nil:List[A])((b, a) => Cons(a, b))
+  def reverse[A](as: List[A]): List[A] = foldLeft(as, Nil: List[A])((b, a) => Cons(a, b))
 }
