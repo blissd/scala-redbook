@@ -78,4 +78,9 @@ class ListTest extends FunSuite with Matchers {
     reverse(List(1, 2, 3)) shouldBe List(3, 2, 1)
     reverse(Nil) shouldBe Nil
   }
+
+  test("append in foldLeft") {
+    append(List(1, 2, 3), 4) shouldBe List(1, 2, 3, 4)
+    append(Nil, 1) shouldBe List(1)
+  }
 }
