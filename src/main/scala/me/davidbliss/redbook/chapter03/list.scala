@@ -85,5 +85,5 @@ object List {
     foldLeft(reverse(as), z)((b, a) => f(a, b))
 
   // exercise 3.14
-  def append[A](as: List[A], a: A): List[A] = foldLeft(reverse(as), Cons(a, Nil))((b, a) => Cons(a, b))
+  def append[A](as: List[A], a: A): List[A] = foldRight(as, Cons(a, Nil))((a, b) => Cons(a, b))
 }
