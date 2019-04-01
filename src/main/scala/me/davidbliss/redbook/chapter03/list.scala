@@ -86,4 +86,16 @@ object List {
 
   // exercise 3.14
   def append[A](as: List[A], a: A): List[A] = foldRight(as, Cons(a, Nil))((a, b) => Cons(a, b))
+
+  // exercise 3.15
+  def concat[A](l: List[List[A]]): List[A] = {
+
+    @tailrec
+    def prepend(a: List[A], b: List[A]): List[A] = a match {
+      case Cons(h, t) => prepend(t, Cons(h, b))
+      case Nil => b
+    }
+
+    foldLeft(l, Nil: List[A])((a,b) => prepend(reverse(a), b))
+  }
 }

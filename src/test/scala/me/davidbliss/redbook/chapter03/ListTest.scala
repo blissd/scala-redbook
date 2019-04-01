@@ -83,4 +83,8 @@ class ListTest extends FunSuite with Matchers {
     append(List(1, 2, 3), 4) shouldBe List(1, 2, 3, 4)
     append(Nil, 1) shouldBe List(1)
   }
+
+  test("concat") {
+    concat(List(List(1, 2, 3), List(4, 5, 6), List(7, 8, 9))) shouldBe List(1, 2, 3, 4, 5, 6, 7, 8, 9)
+  }
 }
